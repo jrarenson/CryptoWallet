@@ -13,8 +13,8 @@
 	}
 	else{
 		$servername = "mars.cs.qc.cuny.edu";
-		$username = "geau6127";
-		$password = "23096127";
+		$username = "kiye0230"; // your venus login
+		$password = "23550230"; // your venus password
 
 		// Create connection
 		$conn = new mysqli($servername, $username, $password);
@@ -24,7 +24,7 @@
 		    die("Connection failed: " . $conn->connect_error);
 		} else {
 		
-			$db_selected = mysqli_select_db($conn, 'geau6127');
+			$db_selected = mysqli_select_db($conn, 'kiye0230');// your venus login
 			if (!$db_selected) {
 		    	die ('Can\'t use DB : ' . mysql_error());
 			} else{
