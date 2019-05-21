@@ -1,25 +1,25 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-	<title> Send QCoins </title>
+	<title> Send Money </title>
 
 <body>
-
-
-
 <div class="container">
-	<a class="btn btn-primary notComplete" href="../html/home.html"><h3>Home</h3></a><br><br>
-	<h2>Send QCoins</h2><br>
-	<form action="../php/sender.php" method="POST">
-	  Recipient:<br>
-	  <input type="text" name="recipient">
-	  <br>
-	  Amount to Send:<br>
-	  <input type="number" name="amountToSend">
-	  <br><br>
-	  <input type="submit" class="btn btn-primary" value="Submit">
-	</form>
+	<a class="btn btn-primary" href="../html/home.html"><h3>Home</h3></a><br><br>
+	<div class="container">
+		<h2>Send Money</h2>
 
+		<form action="../php/sender.php" method="POST">
+		  Recipient:<br>
+		  <input type="text" name="recipient">
+		  <br>
+		  Amount to Send:<br>
+		  <input type="number" name="amountToSend"><br><br>
+		  <input type="submit" class="btn btn-primary" value="Submit">
+		</form>
+	</div>
+</div>
 </body>
 </html>
