@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 	<title> Send QCoins </title>
 
 <body>
 
 <h2>Send QCoins</h2>
 
-<form action="../php/sender.php" method="POST">
-  Recipient:<br>
-  <input type="text" name="recipient">
-  <br>
-  Amount to Send:<br>
-  <input type="number" name="amountToSend">
-  <br>
-  <input type="submit" value="Submit">
-</form>
+<div class="container">
+	<form action="../php/sender.php" method="POST">
+	  Recipient:<br>
+	  <input type="text" name="recipient">
+	  <br>
+	  Amount to Send:<br>
+	  <input type="number" name="amountToSend">
+	  <br><br>
+	  <input type="submit" class="btn btn-primary" value="Submit">
+	</form>
 
 </body>
 </html>
