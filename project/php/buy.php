@@ -46,7 +46,7 @@
 				$sql = "INSERT INTO transactions(id, sender, receiver, amount) VALUES (DEFAULT, 'QCOIN', '$user', $amt);";
                 $conn->query($sql);
 				
-				echo '<p>Transaction completed.</p><a href="../html/buy.html">Click to return to the Buy page.</a>';
+				echo '<p>Transaction completed.</p><a href="../html/buysell.html">Click to return to the Buy/Sell page.</a>';
                 
              
           
