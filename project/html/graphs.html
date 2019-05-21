@@ -11,7 +11,72 @@
 <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,litecoin,bitcoin-cash" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
 
 
+    <script>
 
+function showBitcoin(){
+var a = document.getElementById('btcGraph');
+var b = document.getElementById('ethGraph');
+var c = document.getElementById('ltcGraph');
+var d = document.getElementById('bchGraph');
+
+if(a.style.display === 'none'){
+ a.style.display = 'block';
+ b.style.display = 'none';
+ c.style.display = 'none';
+ d.style.display = 'none';
+}else{ 
+ a.style.display ='none';
+}
+}
+    
+function showEthereum(){
+var a = document.getElementById('btcGraph');
+var b = document.getElementById('ethGraph');
+var c = document.getElementById('ltcGraph');
+var d = document.getElementById('bchGraph');
+
+if(b.style.display === 'none'){
+ b.style.display = 'block';
+ a.style.display = 'none';
+ c.style.display = 'none';
+ d.style.display = 'none';
+}else{ 
+ b.style.display ='none';
+}
+}
+
+function showLitecoin(){
+var a = document.getElementById('btcGraph');
+var b = document.getElementById('ethGraph');
+var c = document.getElementById('ltcGraph');
+var d = document.getElementById('bchGraph');
+
+if(c.style.display === 'none'){
+ c.style.display = 'block';
+ a.style.display = 'none';
+ b.style.display = 'none';
+ d.style.display = 'none';
+}else{ 
+ c.style.display ='none';
+}
+} 
+    
+function showBitcoinCash(){
+var a = document.getElementById('btcGraph');
+var b = document.getElementById('ethGraph');
+var c = document.getElementById('ltcGraph');
+var d = document.getElementById('bchGraph');
+
+if(d.style.display === 'none'){
+ d.style.display = 'block';
+ a.style.display = 'none';
+ b.style.display = 'none';
+ c.style.display = 'none';
+}else{ 
+ d.style.display ='none';
+}
+}
+</script>
 
 
 <div class='dropdown' style='padding-top: 25px; padding-left: 12px; position: fixed;'>
