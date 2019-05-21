@@ -74,8 +74,7 @@
                 }
             } 
              
-            $conn->close();   
-            header("Location: ../html/send.html");                  
+            $conn->close();                     
             }
         }
     }    
