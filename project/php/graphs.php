@@ -1,14 +1,13 @@
 <?php
-		session_start();
+ session_start();
 ?>
 <html>
-<body>
 <head>
 <link rel="stylesheet" href="../css/graphs.css">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
-
+<body class="bg-primary">
 <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
 <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,litecoin,bitcoin-cash" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
 
@@ -16,69 +15,84 @@
 
 
 <?php
-echo "<div class='dropdown' style='padding-top: 20px; position: fixed;'>";
-echo "<button style='position:fixed;' class='dropbtn'>Coins</button>";
+echo "<div class='dropdown' style='padding-top: 25px; padding-left: 12px; position: fixed;'>";
+echo "<button class='dropbtn'>Coins</button>";
 echo "<div class='dropdown-content'>";
-echo "<a onclick='showBitcoin(), hideCharts();' style='padding-top: 20px;' class='coins'>Bitcoin</a>";
-echo "<a onclick='showEthereum(), hideCharts();' style='padding-top: 20px;' class='coins'>Ethereum</a>";
-echo "<a onclick='showLitecoin(), hideCharts();' style='padding-top: 20px;' class='coins'>Litecoin</a>";
-echo "<a onclick='showBitcoinCash(), hideCharts();' style='padding-top: 20px;' class='coins'>Bitcoin Cash</a>";
-
-echo "<script>function hideCharts(){
-     var b = document.getElementByClass('tradingview-widget-container');
-     if(b.style.display === 'none'){
-        b.style.display = 'block';
-        }else{
-          b.style.display = 'none';
-        }
-     }</script>";
-   
+echo "<a onclick='showBitcoin()' class='coins'>Bitcoin</a>";
+echo "<a onclick='showEthereum()' class='coins'>Ethereum</a>";
+echo "<a onclick='showLitecoin()' class='coins'>Litecoin</a>";
+echo "<a onclick='showBitcoinCash()' class='coins'>Bitcoin Cash</a>";
 
     
     
-echo "<script>function showBitcoin(){
+echo "<script>
 
-var x = document.getElementById('btcGraph');
-if(x.style.display === 'none'){
- x.style.display = 'block';
-}else{ 
- x.style.display ='none';
-}
-}</script>";   
-    
-echo "<script>function showEthereum(){
+function showBitcoin(){
+var a = document.getElementById('btcGraph');
+var b = document.getElementById('ethGraph');
+var c = document.getElementById('ltcGraph');
+var d = document.getElementById('bchGraph');
 
-var y = document.getElementById('ethGraph');
-if(y.style.display === 'none'){
- y.style.display = 'block';
-}else{ 
- y.style.display ='none';
-}
-}</script>"; 
-
-echo "<script>function showLitecoin(){
-
-var z = document.getElementById('ltcGraph');
-if(z.style.display === 'none'){
- z.style.display = 'block';
-}else{ 
- z.style.display ='none';
-}
-}</script>"; 
-    
-echo "<script>function showBitcoinCash(){
-
-var a = document.getElementById('bchGraph');
 if(a.style.display === 'none'){
  a.style.display = 'block';
+ b.style.display = 'none';
+ c.style.display = 'none';
+ d.style.display = 'none';
 }else{ 
  a.style.display ='none';
 }
+}
+    
+function showEthereum(){
+var a = document.getElementById('btcGraph');
+var b = document.getElementById('ethGraph');
+var c = document.getElementById('ltcGraph');
+var d = document.getElementById('bchGraph');
+
+if(b.style.display === 'none'){
+ b.style.display = 'block';
+ a.style.display = 'none';
+ c.style.display = 'none';
+ d.style.display = 'none';
+}else{ 
+ b.style.display ='none';
+}
+}
+
+function showLitecoin(){
+var a = document.getElementById('btcGraph');
+var b = document.getElementById('ethGraph');
+var c = document.getElementById('ltcGraph');
+var d = document.getElementById('bchGraph');
+
+if(c.style.display === 'none'){
+ c.style.display = 'block';
+ a.style.display = 'none';
+ b.style.display = 'none';
+ d.style.display = 'none';
+}else{ 
+ c.style.display ='none';
+}
+} 
+    
+function showBitcoinCash(){
+var a = document.getElementById('btcGraph');
+var b = document.getElementById('ethGraph');
+var c = document.getElementById('ltcGraph');
+var d = document.getElementById('bchGraph');
+
+if(d.style.display === 'none'){
+ d.style.display = 'block';
+ a.style.display = 'none';
+ b.style.display = 'none';
+ c.style.display = 'none';
+}else{ 
+ d.style.display ='none';
+}
 }</script>"; 
 
+  echo "</div>";
 echo "</div>";
-echo "</div>";
-
 
 
 ?>
@@ -113,7 +127,7 @@ new TradingView.widget(
 <!-- END of BTC Chart -->
 
 <!-- Dynamic chart for Ethereum -->
-<div id="ethGraph" class="tradingview-widget-container">
+<div id="ethGraph" style='padding-top:65px;' class="tradingview-widget-container">
   <div id="tradingview_b445b"></div>
   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/COINBASE-ETHUSD/" rel="noopener" target="_blank"><span class="blue-text">ETHUSD Chart</span></a> by TradingView</div>
   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
@@ -142,7 +156,7 @@ new TradingView.widget(
 <!-- END of ETH Chart -->
     
 <!-- Dynamic Chart for Litecoin -->
-<div id="ltcGraph" class="tradingview-widget-container">
+<div id="ltcGraph" style='padding-top:65px;' class="tradingview-widget-container">
   <div id="tradingview_054d2"></div>
   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/COINBASE-LTCUSD/" rel="noopener" target="_blank"><span class="blue-text">LTCUSD Chart</span></a> by TradingView</div>
   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
@@ -171,7 +185,7 @@ new TradingView.widget(
 <!-- END of LTC Chart-->
     
 <!-- Dynamic Chart for Bitcoin Cash -->
-<div id="bchGraph" class="tradingview-widget-container">
+<div id="bchGraph" style='padding-top:65px;' class="tradingview-widget-container">
   <div id="tradingview_90b56"></div>
   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/COINBASE-BCHUSD/" rel="noopener" target="_blank"><span class="blue-text">BCHUSD Chart</span></a> by TradingView</div>
   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
