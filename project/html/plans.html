@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../img/logo.png">
+  <script src="../js/script.js"></script>
+  <title>QCoin</title>
+</head>
+<body onload="getPlan()">
+  <div class="container">
+    <span id="headings"></span>
+    <div class="container">
+      <h3> Your current plan: <span id="plantype"> </span> </h3>
+      <img src="../img/plans.png"><br><br>
+      <form action="../php/plans.php" method="POST">
+        Select a plan: <br>
+        <input type="radio" name="plan" value="0"> Free<br>
+        <input type="radio" name="plan" value="1"> Silver<br>
+        <input type="radio" name="plan" value="2"> Gold <br>
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

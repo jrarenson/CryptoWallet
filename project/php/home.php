@@ -16,7 +16,7 @@
         echo '<a class="btn btn-primary notComplete" href="buy.php"><h3>Buy</h3></a>';
         echo '<a class="btn btn-primary notComplete" href="sell.php"><h3>Sell</h3></a>';
         echo '<a class="btn btn-primary notComplete" href="send.php"><h3>Send</h3></a>';
-        echo '<a class="btn btn-primary notComplete" href="graphs.php"><h3>Graphs</h3></a>'; 
+        echo '<a class="btn btn-primary notComplete" href="graphs.html"><h3>Graphs</h3></a>'; 
         echo '<a class="btn btn-primary" href="myAccount.php"><h3>My Account</h3></a>';
         echo '<a class="btn btn-primary" href="logout.php"><h3>Sign Out</h3></a>';
         echo 'Logged in as: ', $_SESSION["user"];

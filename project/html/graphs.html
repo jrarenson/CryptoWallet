@@ -1,9 +1,8 @@
-<?php
- session_start();
-?>
 <html>
 <head>
 <link rel="stylesheet" href="../css/graphs.css">
+<script src="../js/graphs.js"></script>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
@@ -12,20 +11,7 @@
 <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,litecoin,bitcoin-cash" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
 
 
-
-
-<?php
-echo "<div class='dropdown' style='padding-top: 25px; padding-left: 12px; position: fixed;'>";
-echo "<button class='dropbtn'>Coins</button>";
-echo "<div class='dropdown-content'>";
-echo "<a onclick='showBitcoin()' class='coins'>Bitcoin</a>";
-echo "<a onclick='showEthereum()' class='coins'>Ethereum</a>";
-echo "<a onclick='showLitecoin()' class='coins'>Litecoin</a>";
-echo "<a onclick='showBitcoinCash()' class='coins'>Bitcoin Cash</a>";
-
-    
-    
-echo "<script>
+    <script>
 
 function showBitcoin(){
 var a = document.getElementById('btcGraph');
@@ -89,13 +75,20 @@ if(d.style.display === 'none'){
 }else{ 
  d.style.display ='none';
 }
-}</script>"; 
-
-  echo "</div>";
-echo "</div>";
+}
+</script>
 
 
-?>
+<div class='dropdown' style='padding-top: 25px; padding-left: 12px; position: fixed;'>
+<button class='dropbtn'>Coins</button>
+  <div class='dropdown-content'>
+   <a onclick='showBitcoin()' class='coins'>Bitcoin</a>
+   <a onclick='showEthereum()' class='coins'>Ethereum</a>
+   <a onclick='showLitecoin()' class='coins'>Litecoin</a>
+   <a onclick='showBitcoinCash()' class='coins'>Bitcoin Cash</a>
+  </div>
+</div>
+
 
 <!-- Dynamic chart for Bitcoin -->
 <div id='btcGraph' style='padding-top:65px;' class="tradingview-widget-container">

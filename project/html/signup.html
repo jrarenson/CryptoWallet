@@ -2,15 +2,24 @@
 <html>
 <head>
 	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="../css/signup.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 </head>
 <body>
+		<h1 id="heading">Signup</h1>
+<div class="signup">
 
-<form method="POST" action="../php/createAccount.php">
-	<input type="text" name="username" placeholder="username" required="true">
-	<input type="text" name="password" placeholder="password" required="true">
-	<input type="submit" value="Sign Up">
+
+<form method="POST" action="../php/authUser.php">
+	UserName:<br>
+	<input type="text" name="username" required="true" id="username">
+	Password:<br>
+	<input type="password" name="password" required="true" id="password">
+
+	<input type="submit" value="Sign Up" id="submit">
+
 </form>
-
+</div>
 
 
 </body>
